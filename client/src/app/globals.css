@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --buttonColor: #1C77E8;
+  --txt: #E5E7EB;
+  --bg: #0B0F1A;
+}
+
+:root.light {
+  --bg: #F6F7FB;
+  --txt: #1E293B;
+  --buttonColor: #1C77E8;
+}
+
+.Toastify__toast {
+  width: 90%;
+  max-width: 400px;
+  font-size: 13px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .Toastify__toast {
+    width: 60% !important;
+    height: 3vh;
+    font-size: 12px;
+  }
+
+  .Toastify__toast-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

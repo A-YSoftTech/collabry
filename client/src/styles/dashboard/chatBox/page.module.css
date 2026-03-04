@@ -1,0 +1,537 @@
+.drag {
+    position: absolute;
+    /* inset: 0;
+    margin: auto; */
+    /* top: 0; */
+    /* right: 0; */
+    /* background-color: red; */
+    width: fit-content;
+    height: fit-content;
+    color: var(--txt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* overflow-y: auto; */
+    cursor: grab;
+}
+
+.noDrag {
+    position: absolute;
+    background-color: var(--bg);
+    width: 100%;
+    height: 100%;
+    color: var(--txt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* overflow-y: auto; */
+    cursor: grab;
+}
+
+.resize {
+    height: 30vh;
+    /* background: red; */
+    background: rgba(43, 43, 43, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.postCard {
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 15px; */
+    /* background-color: red; */
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    /* background-color: purple; */
+}
+
+.header i {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 50%;
+    background: rgba(43, 43, 43, 0.5);
+    /* background-color: grey; */
+    /* color: red; */
+    font-size: 0.8vw;
+    cursor: pointer;
+}
+
+.postHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: grab;
+    padding: 0 10px;
+    border-bottom: 0.5px dotted grey;
+    /* background-color: purple; */
+}
+
+.info {
+    width: 50%;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: green; */
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.postHeaderTime {
+    display: flex;
+    flex: 1;
+    gap: 0rem;
+    flex-direction: column;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.postTime {
+    font-size: 12px;
+    color: #888;
+}
+
+.dots i {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 25px;
+    transition: .5s;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+.dots i:hover {
+    transform: scale(1.1);
+}
+
+
+.chatbody {
+    width: 100%;
+    flex: 1;
+    cursor: auto;
+    padding: 12px;
+    overflow-y: auto;
+    /* background-color: red; */
+}
+
+.textbox {
+    width: 100%;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    /* border-top: 0.5px dotted grey; */
+    /* background-color: green; */
+}
+
+.textbox input[type="text"] {
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 14px;
+    border: 0.1px solid grey;
+    background-color: transparent;
+    border-radius: 25px;
+    color: var(--txt);
+}
+
+.textbox input[type="submit"] {
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--buttonColor);
+    color: var(--txt);
+    border: none;
+    transform: translateX(-1px);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.textbox input[type="submit"]:hover {
+    /* outline: 0.5px solid white; */
+    transform: rotate(-30deg);
+}
+
+.postHeaderMessage {
+    /* height: 60px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: grab;
+    /* margin-left: -8px; */
+    /* margin-bottom: 8px; */
+    /* background-color: purple; */
+}
+
+.containerSender {
+    width: 100%;
+    /* margin-left: 0.5rem; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    /* background-color: green; */
+}
+
+.infoSender {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    /* background-color: purple; */
+}
+
+.containerReceiver {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    /* background-color: pink; */
+}
+
+.infoReceiver {
+    width: 50%;
+    /* margin-left: 0.5rem; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    /* background-color: green; */
+}
+
+.profileImageSender,
+.profileImageReceiver {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 1px solid grey;
+}
+
+.usernameSender {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: copy;
+    /* background-color: blue; */
+}
+
+.usernameReceiver {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: copy;
+    text-align: right;
+    /* background-color: red; */
+}
+
+.empty {
+    /* height: 100%; */
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+    /* background-color: red; */
+}
+
+.postTimeReceiver {
+    font-size: 10px;
+    color: grey;
+    text-align: right;
+}
+
+.postTimeSender {
+    font-size: 10px;
+    color: grey;
+}
+
+.suggestion {
+    /* background-color: red; */
+    /* height: 40px;  */
+    width: 95%;
+    padding-top: 8px;
+    gap: 0.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.suggestion span {
+    /* height: 20px; */
+    display: inline-flex;
+    align-items: center;
+    /* width: fit-content; */
+    background-color: rgba(255, 255, 255, 0.096);
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+.profileUpdate {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.2);
+    /* border: 2px solid green; */
+    backdrop-filter: blur(19px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: popup 1.1s both;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .postCard {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .postHeader {
+        height: 100%;
+        padding: 10px 8px 12px 5px;
+    }
+
+    .info {
+        gap: 0.5rem;
+    }
+
+    .profileImage {
+        width: 35px;
+        height: 35px;
+    }
+
+    .chatbody {
+        padding: 10px;
+    }
+
+    .textbox input[type="text"] {
+        padding: 15px;
+    }
+
+    .textbox input[type="submit"] {
+        padding: 12px 17px;
+    }
+
+    .postHeaderMessage {
+        gap: 1rem;
+    }
+
+    .containerSender {
+        gap: 0.5rem;
+    }
+
+    .infoSender {
+        gap: 0.5rem;
+        width: 70%;
+    }
+
+    .containerReceiver {
+        gap: 0.5rem;
+    }
+
+    .infoReceiver {
+        gap: 0.5rem;
+        width: 70%;
+    }
+
+    .profileImageSender,
+    .profileImageReceiver {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    
+
+    .postCard {
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 15px;
+        /* background-color: aquamarine; */
+    }
+
+    .header i {
+        font-size: 2vw;
+    }
+
+    .postHeader {
+        height: 50px;
+        padding: 25px 5px 30px 5px;
+        /* background-color: palevioletred; */
+    }
+
+    .info {
+        gap: 0.5rem;
+    }
+
+    .profileImage {
+        /* background-color: red; */
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .username {
+        font-size: 14px;
+    }
+
+    .postTime {
+        font-size: 10px;
+    }
+
+    .dots i {
+        font-size: 14px;
+    }
+
+    .chatbody {
+        padding: 10px;
+    }
+
+    .textbox {
+        padding: 10px 5px;
+        /* background-color: red; */
+    }
+
+    .textbox input[type="text"] {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .textbox input[type="submit"] {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .infoSender {
+        width: 80%;
+    }
+
+    .infoReceiver {
+        width: 80%;
+    }
+
+    .profileImageSender,
+    .profileImageReceiver {
+        width: 25px;
+        height: 25px;
+    }
+
+    .usernameSender,
+    .usernameReceiver {
+        font-size: 12px;
+    }
+
+    .postTimeReceiver {
+        font-size: 10px;
+    }
+
+    .postTimeSender {
+        font-size: 10px;
+    }
+
+    .suggestion {
+        padding-top: 10px;
+        gap: 0.5rem;
+    }
+
+    .suggestion::-webkit-scrollbar {
+        display: none;
+    }
+
+    .suggestion span {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .empty {
+        font-size: 10px;
+    }
+}

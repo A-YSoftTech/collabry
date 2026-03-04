@@ -1,0 +1,521 @@
+.containerBox {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  color: var(--txt);
+  background-color: rgba(128, 128, 128, 0.2);
+  backdrop-filter: blur(9px);
+  /* padding: 30px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 600px;
+  background-color: var(--bg);
+  /* background-color: blue; */
+  overflow-y: auto;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+  /* background-color: red; */
+}
+
+.header h1 {
+  padding: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  /* margin-left: -40px; */
+}
+
+.header p {
+  padding: 20px;
+  font-weight: 500;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.media {
+  width: 100%;
+  /* aspect-ratio: 2/1; */
+  /* border-radius: 30px; */
+  margin-top: 10px;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  color: var(--txt);
+  /* background-color: red; */
+
+}
+
+.empty {
+  border-radius: 10px;
+  padding: 20px 30px;
+  font-size: 12px;
+  text-align: justify;
+  color: var(--txt);
+}
+
+.postCard {
+  width: 500px;
+  /* background: red; */
+  /* border-radius: 15px; */
+  margin: 1rem 0;
+  padding-bottom: 5px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 5px 10px 10px;
+  /* background-color: red; */
+}
+
+.info {
+  width: 70%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  /* background-color: green; */
+}
+
+.profileImage {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--txt);
+}
+
+.postHeaderTime {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.postTime {
+  font-size: 12px;
+  color: var(--txt);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.8;
+}
+
+.dots {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.dots i {
+  padding: 0 10px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: .5s;
+  opacity: 0.8;
+}
+
+.dots span {
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  transition: .5s;
+  border: 0.5px solid var(--buttonColor);
+}
+
+.dots p {
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  transition: .5s;
+  border: 0.5px solid grey;
+}
+
+.dots span:hover {
+  background-color: var(--buttonColor);
+}
+
+.dots i:hover {
+  scale: 1.1;
+  opacity: 1;
+}
+
+.caption {
+  width: 100%;
+}
+
+.file {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.media {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  cursor: none;
+}
+
+.fileText {
+  padding: 5px 15px 0 15px;
+  min-height: 10px;
+  font-size: 14px;
+  text-align: justify;
+  text-overflow: ellipsis;
+  /* background-color: blue; */
+}
+
+.caption strong {
+  padding-left: 15px;
+  color: var(--buttonColor);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.postActions {
+  /* background-color: #888; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.actionBtn {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.postActions p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+  /* padding: 10px; */
+  /* border-radius: 15px; */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--txt);
+  transition: .5s;
+  cursor: pointer;
+}
+
+.postActions p:hover {
+  background-color: var(--bg);
+}
+
+.postActions p i {
+  font-size: 20px;
+}
+
+.commentBox {
+  position: absolute;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: var(--bg);
+  /* width: ; */
+  animation: popup 1.1s both;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+/* .dropdownMenu {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg);
+
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.dropdownMenu p {
+  padding: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdownMenu p:hover {
+  background: rgba(128, 128, 128, 0.33);
+  border-radius: 6px;
+}
+
+
+.listItem {
+  background: rgba(255, 255, 255, 0.07);
+  margin: 6px 0;
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--txt);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.listItem strong {
+  color: var(--txt);
+}
+
+.listItem img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+} */
+
+@media (max-width: 1024px) {
+  .header {
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    /* background-color: red; */
+  }
+  
+  .header h1 {
+    width: 40%;
+    padding-left: 20px;
+    /* font-size: 3vw; */
+  }
+
+  .header p {
+    font-weight: 500;
+    /* font-size: 3vw; */
+  }
+
+  .postCard {
+    padding: 20px;
+  }
+
+  .postHeaderTime {
+    gap: 0rem;
+  }
+
+  .info {
+    gap: 0.7rem;
+  }
+
+  .profileImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dots {
+    gap: 0rem;
+  }
+
+  .dots i {
+    /* font-size: 2.2vw; */
+    padding: 10px;
+  }
+
+  /* .caption p {
+    font-size: 1.3vw;
+  } */
+
+  .media {
+    margin-top: 0px;
+  }
+
+  .postActions {
+    padding: 0px;
+  }
+
+  .postActions button {
+    /* font-size: 1.5vw; */
+    padding: 14px 20px;
+  }
+
+  /* .postActions button i {
+    font-size: 2vw;
+  } */
+
+  .commentBox {
+    width: 600px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    /* padding-bottom: 7vh; */
+    width: 100%;
+  }
+
+  .header {
+    padding: 0;
+    height: 30px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .postCard {
+    padding: 10px;
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  .profileImage {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dots i {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .dots span{
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .dots p{
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+
+  .dots {
+    gap: 0.2rem;
+  }
+
+  .caption {
+    padding: 0.5rem 0;
+  }
+
+  .caption p {
+    font-size: 12px;
+  }
+
+  .media {
+    margin-top: -5px;
+    /* border-radius: 15px; */
+  }
+
+  .username {
+    font-size: 12px;
+  }
+
+  .info {
+    gap: 0.5rem;
+  }
+
+  .postHeaderTime {
+    gap: 0rem;
+  }
+
+  .postTime {
+    font-size: 10px;
+  }
+
+  .postActions {
+    padding: 0px;
+  }
+
+  .postActions span {
+    font-size: 14px;
+  }
+  
+  .postActions span p {
+    font-size: 12px;
+  }
+
+  .commentBox {
+    width: 100%;
+  }
+}

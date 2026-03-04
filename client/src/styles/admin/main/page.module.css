@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.title {
+    /* padding: 15px; */
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tableWrapper {
+    width: 100%;
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    /* background-color: red; */
+}
+
+.usersTable thead tr th{
+    padding: 10px;
+    text-align: left;
+}
+.usersTable tbody tr:hover{
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.usersTable tbody tr td{
+    /* background-color: blue; */
+    padding: 10px;
+    /* border-bottom: 1px solid white; */
+    text-align: left;
+}
+
+.userImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.role {
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: var(--txt);
+}
+
+.admin {
+    background-color: red;
+}
+
+.user {
+    background-color: green;
+}
+
+.btn {
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.update {
+    background-color: blue;
+    color: var(--txt);
+}
+
+.delete {
+    background-color: red;
+    color: var(--txt);
+}
+.editor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(9px);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

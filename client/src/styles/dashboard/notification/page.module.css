@@ -1,0 +1,223 @@
+.containerBox{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--bg);
+    overflow-y: auto;
+}
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 600px;
+    /* background-color: var(--bg); */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    color: var(--txt);
+}
+
+.header {
+    height: 70px;
+    width: 95%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+    /* background-color: blue; */
+}
+
+.header h1 {
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header p {
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.box {
+    width: 90%;
+    /* margin-top: 0.5rem; */
+    padding: 2px 0px;
+    color: var(--txt);
+    /* background-color: red; */
+}
+
+.box h1 {
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.box p {
+    font-size: 12px;
+    text-align: center;
+    color: var(--txt);
+}
+
+.postCard {
+    padding: 10px;
+    margin: 0.5rem 0;
+    /* background-color: blue; */
+}
+.postCard:hover{
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.postHeader {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.info {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    /* background-color: blue; */
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--txt);
+}
+
+.postHeaderTime {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.postTime {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.dots {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* background-color: rgb(1, 51, 34); */
+}
+
+.dots i {
+    padding: 0 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: .5s;
+    opacity: 0.8;
+}
+
+.dots span {
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: .5s;
+    border: 0.5px solid var(--buttonColor);
+}
+.dots p {
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: .5s;
+    border: 0.5px solid grey;
+}
+
+.dots span:hover {
+    background-color: var(--buttonColor);
+}
+
+.dots i:hover {
+    scale: 1.1;
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        height: 100%;
+        width: 500px;
+    }
+
+    .header {
+        min-height: 55px;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .header form {
+        width: 100%;
+        height: 90%;
+        border-radius: 25px;
+        padding: 0 10px;
+    }
+
+    .header form input[type="text"] {
+        padding: 0 10px;
+    }
+
+    .header form input[type="submit"] {
+        padding: 0 10px;
+    }
+
+    .dots i {
+        padding: 0 0px 0 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .header {
+        min-height: 50px;
+    }
+
+    .header form {
+        justify-content: start;
+    }
+
+    .header form input[type="text"] {
+        padding: 0 10px;
+    }
+
+    .header form input[type="submit"] {
+        padding: 0 8px;
+    }
+    .postTime{
+        font-size: 8px;
+    }
+
+    .postCard {
+        padding: 0;
+    }
+
+    .dots i {
+        padding: 0 0px 0 10px;
+    }
+}

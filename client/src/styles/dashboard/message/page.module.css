@@ -1,0 +1,309 @@
+.containerBox{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    background-color: var(--bg);
+    overflow: hidden;
+    /* flex: 1; */
+}
+.chatList {
+    height: 100%;
+    min-width: 400px;
+    flex-shrink: 0;
+    /* border: 3px solid red; */
+    background-color: var(--bg);
+    color: var(--txt);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    /* overflow-y: auto; */
+    border-right: 0.5px solid rgba(128, 128, 128, 0.2);
+}
+
+.header {
+    /* height: 70px; */
+    width: 90%;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+.header h1 {
+    /* padding: 10px; */
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+    /* margin-left: -40px; */
+}
+
+.header form {
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.header form p{
+    padding: 10px;
+    color: var(--txt);
+    opacity: 0.8;
+    transition: .3s;
+}
+.header form p:hover{
+    scale: 1.1;
+    opacity: 1;
+}
+.header form input{
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 90%;
+}
+
+.box {
+    min-height: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0 5px;
+    color: var(--txt);
+    overflow-y: auto;
+    /* background-color: red; */
+}
+
+.box h1 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.box p {
+    /* margin: 2rem 0; */
+    font-size: 16px;
+    text-align: justify;
+    color: var(--txt);
+}
+
+.postCard {
+    padding: 10px;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    /* background-color: rgb(17, 255, 0); */
+}
+
+.postCard:hover{
+    background-color: rgba(128, 128, 128, 0.2);
+}
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.info {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    /* background-color: blue; */
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid grey;
+}
+
+.postHeaderTime {
+    width: 80%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    /* background-color: red; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.postTime {
+    font-size: 10px;
+    opacity: 0.8;
+    /* background-color: red; */
+}
+
+.chatContent{
+    position: relative;
+    height: 100%;
+    min-width: 400px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    scroll-snap-align: center;
+    /* border: 3px solid green; */
+}
+.noChat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+}
+.noChat p{
+    color: var(--txt);
+    font-size: 16px;
+}
+.noChat i{
+    color: var(--txt);
+    font-size: 74px;
+}
+
+@media (max-width: 1024px) {
+    .containerBox {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        flex-wrap: nowrap;
+    }
+
+    .chatList,
+    .chatContent {
+        min-width: 100%;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+    .header {
+        width: 70%;
+    }
+
+    /* .header h1 {
+        padding: 10px;
+        font-size: 3vw;
+    } */
+
+    /* .header p{
+        font-weight: 500;
+        font-size: 3vw;
+    } */
+
+    .box {
+        width: 70%;
+        margin-top: 1rem;
+    }
+    
+    /* .box h1 {
+        font-size: 2vw;
+    } */
+    
+    
+    .postCard {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    
+    .info {
+        /* background-color: red; */
+        gap: 0.5rem;
+    }
+
+    .profileImage {
+        width: 40px;
+        height: 40px;
+    }
+
+    .postHeaderTime {
+        gap: 0.1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    /* .containerBox{
+        padding: 3vh 0 7vh 0;
+    } */
+    .header {
+        width: 90%;
+    }
+    .chatContent{
+        width: 100%;
+    }
+    .chatList{
+        width: 100%;
+    }
+
+    .box {
+        width: 95%;
+        margin-top: 0rem;
+        padding: 10px 15px;
+    }
+
+    /* .box h1 {
+        font-size: 4vw;
+        margin-left: -25px;
+    } */
+
+    /* .box p {
+        font-size: 3vw;
+    } */
+
+    .postCard {
+        width: 100%;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .info {
+        /* background-color: red; */
+        gap: 0.5rem;
+    }
+
+    .profileImage {
+        width: 30px;
+        height: 30px;
+        border-width: 1px;
+    }
+
+    .postHeaderTime {
+        gap: 0rem;
+    }
+
+    .username {
+        font-size: 3vw;
+    }
+
+    .postTime {
+        font-size: 2vw;
+    }
+
+    .dots {
+        gap: 0rem;
+    }
+
+    .dots i {
+        font-size: 4vw;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,230 @@
+.container {
+    position: relative;
+    height: 100vh;
+    width: 500px;
+    top: 0;
+    right: 0;
+    /* background-color: var(--bg); */
+    color: var(--txt);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    /* overflow-y: auto; */
+}
+
+.header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--txt);
+    margin-top: 1rem;
+    /* background-color: #ff4d4d; */
+}
+
+.commentBox {
+    height: 100%;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+.content {
+    height: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    /* background-color: blue; */
+}
+
+.empty {
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 12px;
+    text-align: justify;
+    color: var(--txt);
+}
+
+.postCard {
+    width: 100%;
+}
+
+.postCard:hover {
+    background: rgba(128, 128, 128, 0.1);
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2px;
+    padding: 10px 5px 10px 10px;
+    /* background-color: red; */
+}
+
+.info {
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    /* background-color: green; */
+}
+
+.profileImage {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--txt);
+}
+
+.postHeaderTime {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.postTime {
+    font-size: 12px;
+    color: var(--txt);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.8;
+}
+
+.dots {
+    width: 60%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.dots i {
+    padding: 0 10px;
+    font-size: 14px;
+    transition: .5s;
+    text-align: justify;
+}
+
+.dots i:hover {
+    scale: 1.1;
+}
+
+.commentTxt {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.textarea {
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--bg);
+    border: 1px solid grey;
+    color: var(--txt);
+    font-size: 14px;
+    border-radius: 25px;
+    outline: none;
+}
+
+
+.textImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.saveBtn {
+    background-color: var(--buttonColor);
+    color: var(--txt);
+    border: 1px solid grey;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.saveBtn:hover {
+    transform: rotate(-30deg);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 750px) {
+    .commentBox{
+        align-items: center;
+    }
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        width: 95%;
+        font-size: 18px;
+        margin-top: 0.5rem;
+    }
+    .commentTxt{
+        width: 100%;
+        padding: 0 10px;
+        /* background-color: red; */
+    }
+
+    .profileImage {
+        width: 35px;
+        height: 35px;
+    }
+
+    .username {
+        font-size: 12px;
+    }
+
+    .postTime {
+        font-size: 10px;
+    }
+
+    .dots i {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    .textarea {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .saveBtn {
+        padding: 8px 13px;
+        font-size: 16px;
+    }
+}
